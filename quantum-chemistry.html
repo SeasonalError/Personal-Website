@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Chemistry | Your Name</title>
+    <meta name="description" content="Quantum Chemistry project page with personal notes and recommended readings." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="quantum-theme">
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header glass">
+        <a class="brand" href="index.html">YN</a>
+        <nav>
+            <ul class="nav-links always-open">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#my-notes">My Notes</a></li>
+                <li><a href="#recommended">Recommended Readings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main data-page class="page active">
+        <section class="hero section reveal">
+            <p class="eyebrow">Project Page</p>
+            <h1>Quantum Chemistry</h1>
+            <p class="lead">
+                A focused space for atomic and quantum mechanical intuition: your uploaded notes and
+                hand-picked references, all in one place.
+            </p>
+        </section>
+
+        <section id="my-notes" class="section reveal">
+            <div class="section-head">
+                <h2>My Notes (PDF Library)</h2>
+                <p>Upload your PDF notes to this folder and list them below.</p>
+            </div>
+            <div class="project-grid">
+                <article class="project-card glass">
+                    <h3>Lecture Notes 01</h3>
+                    <p>Wavefunctions, operators, and the Schrödinger equation basics.</p>
+                    <a href="assets/quantum-notes/lecture-notes-01.pdf">Open PDF</a>
+                </article>
+                <article class="project-card glass">
+                    <h3>Lecture Notes 02</h3>
+                    <p>Hydrogen atom, orbitals, and angular momentum essentials.</p>
+                    <a href="assets/quantum-notes/lecture-notes-02.pdf">Open PDF</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="recommended" class="section reveal">
+            <div class="section-head">
+                <h2>Recommended Readings</h2>
+                <p>Link external papers or attach PDF files directly.</p>
+            </div>
+            <div class="project-grid">
+                <article class="project-card glass">
+                    <h3>Paper / Book Recommendation 01</h3>
+                    <p>Short note on why this is useful.</p>
+                    <a href="https://example.com" target="_blank" rel="noreferrer">Open Link</a>
+                </article>
+                <article class="project-card glass">
+                    <h3>Uploaded Reading PDF</h3>
+                    <p>Use this when you upload a local paper file instead of a URL.</p>
+                    <a href="assets/quantum-readings/recommended-reading-01.pdf">Open PDF</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Your Name. Quantum notes and references.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

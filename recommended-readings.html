@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recommended Readings | Your Name</title>
+    <meta name="description" content="A full reading list of recommended books and papers curated by Your Name." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header glass">
+        <a class="brand" href="index.html">YN</a>
+        <nav>
+            <ul class="nav-links always-open">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#papers">Papers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main data-page class="page active">
+        <section class="hero section reveal">
+            <p class="eyebrow">Reading Library</p>
+            <h1>Things I Recommend Reading</h1>
+            <p class="lead">
+                A single place to browse the books and papers I've read and recommend.
+            </p>
+        </section>
+
+        <section id="books" class="section reveal">
+            <div class="section-head">
+                <h2>Books</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card glass">
+                    <h3>Book Title 01</h3>
+                    <p>Why I recommend this book.</p>
+                    <a href="https://example.com" target="_blank" rel="noreferrer">View Link</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="papers" class="section reveal">
+            <div class="section-head">
+                <h2>Papers</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card glass">
+                    <h3>Paper Title 01</h3>
+                    <p>Key insight from this paper.</p>
+                    <a href="assets/readings/paper-01.pdf">Open PDF</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Your Name. Recommended readings.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
