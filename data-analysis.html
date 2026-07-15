@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Data Analysis | Nimeesh</title>
+
+    <meta name="description"
+        content="Data analysis projects by Nimeesh, including an exploratory study of exoplanets using data from the NASA Exoplanet Archive." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="data-theme">
+
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header glass">
+
+        <a class="brand" href="index.html">NSK</a>
+
+        <nav>
+            <ul class="nav-links always-open">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">My Projects</a></li>
+                <li><a href="#about-data">About the Project</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main data-page class="page active">
+
+        <!-- Hero -->
+
+        <section class="hero section reveal">
+
+            <p class="eyebrow">
+                Data Analysis • Python • Scientific Computing
+            </p>
+
+            <h1>Data Analysis</h1>
+
+            <p class="lead">
+                This page documents my journey of learning scientific data analysis
+                through real datasets. Instead of only following tutorials, I am using
+                projects to learn how to clean data, choose meaningful variables,
+                visualise distributions, recognise limitations, and draw careful
+                conclusions from evidence.
+            </p>
+
+        </section>
+
+        <!-- Projects -->
+
+        <section id="projects" class="section reveal">
+
+            <div class="section-head">
+
+                <h2>My Projects</h2>
+
+                <p>
+                    Each project begins with a real dataset and a question that I want
+                    to investigate. I document both the final results and the mistakes,
+                    decisions, and limitations involved in reaching them.
+                </p>
+
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card glass">
+
+                    <h3>
+                        Transit vs Radial Velocity: What Do They Reveal About
+                        Exoplanets?
+                    </h3>
+
+                    <p>
+                        An exploratory analysis of confirmed exoplanets from the
+                        NASA Exoplanet Archive. I compared the orbital-period and
+                        reported-mass distributions of planets discovered through
+                        the Transit and Radial Velocity methods.
+                    </p>
+
+                    <p>
+                        The project also examines duplicate records, missing
+                        measurements, unequal sample sizes, mass provenance, detection
+                        bias, and an apparent valley in the observed planet-mass
+                        distribution.
+                    </p>
+
+                    <div class="project-links">
+
+                        <a href="assets/Data Analysis/Project 1/Data_Analysis_One.pdf"
+                            target="_blank"
+                            rel="noreferrer">
+                            Open Report
+                        </a>
+
+                        <a href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%201(%20Nasa%20Exoplanets)"
+                            target="_blank"
+                            rel="noreferrer">
+                            View Code
+                        </a>
+
+                    </div>
+
+                    <span>
+                        Python • Pandas • NumPy • Matplotlib • NASA Exoplanet Archive
+                    </span>
+
+                </article>
+
+                <article class="project-card glass">
+
+                    <h3>More Projects Coming Soon</h3>
+
+                    <p>
+                        I am continuing to work with scientific datasets and develop
+                        stronger foundations in statistics, visualisation, and
+                        research-oriented data analysis. Future projects will be
+                        added here as I complete them.
+                    </p>
+
+                    <span>Statistics • Scientific Data • Research</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- About the project -->
+
+        <section id="about-data" class="section reveal">
+
+            <div class="section-head">
+
+                <h2>About the First Project</h2>
+
+                <p>
+                    The main goal was not simply to produce graphs. It was to understand
+                    how analytical choices affect the conclusions that can be drawn
+                    from scientific data.
+                </p>
+
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card glass">
+
+                    <h3>The Question</h3>
+
+                    <p>
+                        Do planets discovered using Transit and Radial Velocity have
+                        different observed orbital-period and mass distributions?
+                    </p>
+
+                    <span>Research Question • Exoplanets</span>
+
+                </article>
+
+                <article class="project-card glass">
+
+                    <h3>The Dataset</h3>
+
+                    <p>
+                        I used the Planetary Systems table from the NASA Exoplanet
+                        Archive. The original table contained multiple published
+                        parameter sets for many planets, so I first had to identify
+                        and remove repeated records.
+                    </p>
+
+                    <span>NASA Archive • Data Cleaning</span>
+
+                </article>
+
+                <article class="project-card glass">
+
+                    <h3>What I Analysed</h3>
+
+                    <p>
+                        I compared orbital periods and reported planet masses using
+                        method-normalised histograms, logarithmic bins, medians,
+                        quartiles, and measurement-coverage checks.
+                    </p>
+
+                    <span>Distributions • Logarithmic Histograms</span>
+
+                </article>
+
+                <article class="project-card glass">
+
+                    <h3>What I Learned</h3>
+
+                    <p>
+                        A row is not always one observation, missing data cannot be
+                        treated blindly, overall measurement coverage can be
+                        misleading, and an interesting pattern is not automatically
+                        proof of a physical law.
+                    </p>
+
+                    <span>Interpretation • Limitations • Bias</span>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Resources -->
+
+        <section class="section reveal">
+
+            <div class="section-head">
+
+                <h2>Project Resources</h2>
+
+                <p>
+                    The complete report contains the methodology, numerical results,
+                    plots, analytical decisions, limitations, and AI-use declaration.
+                </p>
+
+            </div>
+
+            <div class="cta-group">
+
+                <a class="btn btn-primary"
+                    href="assets/Data Analysis/Project 1/Data_Analysis_One.pdf"
+                    target="_blank"
+                    rel="noreferrer">
+                    Read Full Report
+                </a>
+
+                <a class="btn btn-secondary"
+                    href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%201(%20Nasa%20Exoplanets)"
+                    target="_blank"
+                    rel="noreferrer">
+                    View Code on GitHub
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>
+            © <span id="year"></span> Nimeesh. Data analysis projects and reports.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
