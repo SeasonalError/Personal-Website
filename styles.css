@@ -22,7 +22,9 @@ body {
     min-height: 100vh;
     font-family: "Manrope", system-ui, sans-serif;
     color: var(--text);
-    background: radial-gradient(circle at 10% 10%, #121f46, #070b14 45%), var(--bg);
+    background:
+        radial-gradient(circle at 10% 10%, #121f46, #070b14 45%),
+        var(--bg);
     overflow-x: hidden;
 }
 
@@ -53,7 +55,6 @@ body::after {
 }
 
 @keyframes drift {
-
     0%,
     100% {
         transform: translate3d(0, 0, 0) scale(1);
@@ -64,10 +65,15 @@ body::after {
     }
 }
 
+/* ==========================================================
+   GENERAL GLASS EFFECT
+   ========================================================== */
+
 .glass {
     background: var(--panel);
     border: 1px solid var(--line);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--shadow);
 }
 
@@ -76,12 +82,23 @@ body::after {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(124, 92, 255, 0.35), transparent 60%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 92, 255, 0.35),
+            transparent 60%
+        );
     pointer-events: none;
     z-index: -1;
     transform: translate(-50%, -50%);
-    transition: left 0.18s ease, top 0.18s ease;
+    transition:
+        left 0.18s ease,
+        top 0.18s ease;
 }
+
+/* ==========================================================
+   HEADER AND NAVIGATION
+   ========================================================== */
 
 .site-header {
     position: sticky;
@@ -110,6 +127,7 @@ body::after {
     border: 1px solid var(--line);
     border-radius: 0.8rem;
     padding: 0.4rem 0.8rem;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -125,7 +143,9 @@ body::after {
     text-decoration: none;
     padding: 0.4rem 0.65rem;
     border-radius: 0.6rem;
-    transition: background 0.25s ease, transform 0.25s ease;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
 .nav-links a:hover {
@@ -133,16 +153,26 @@ body::after {
     transform: translateY(-2px);
 }
 
+/* ==========================================================
+   PAGE TRANSITIONS
+   ========================================================== */
+
 .page {
     opacity: 0;
     transform: translateY(20px) scale(0.98);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
 }
 
 .page.active {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
+
+/* ==========================================================
+   SECTIONS AND HERO
+   ========================================================== */
 
 .section {
     max-width: 72rem;
@@ -179,6 +209,7 @@ h1 {
 .text-gradient {
     background: linear-gradient(90deg, #9d89ff, #7ef1ff);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
@@ -187,6 +218,10 @@ h1 {
     max-width: 46ch;
     font-size: 1.08rem;
 }
+
+/* ==========================================================
+   GENERAL BUTTONS
+   ========================================================== */
 
 .cta-group {
     display: flex;
@@ -199,7 +234,9 @@ h1 {
     font-weight: 700;
     padding: 0.85rem 1.15rem;
     border-radius: 0.8rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .btn:hover {
@@ -208,7 +245,12 @@ h1 {
 
 .btn-primary {
     color: white;
-    background: linear-gradient(120deg, var(--accent), #a886ff);
+    background:
+        linear-gradient(
+            120deg,
+            var(--accent),
+            #a886ff
+        );
     box-shadow: 0 10px 30px rgba(124, 92, 255, 0.5);
 }
 
@@ -216,6 +258,10 @@ h1 {
     color: var(--text);
     border: 1px solid var(--line);
 }
+
+/* ==========================================================
+   SECTION HEADINGS
+   ========================================================== */
 
 .section-head {
     margin-bottom: 1.2rem;
@@ -227,17 +273,62 @@ h1 {
     max-width: 62ch;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+/* ==========================================================
+   PROJECT CAROUSEL
+   ========================================================== */
+
+.project-carousel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
 }
 
+/*
+The project grid now acts as the horizontal carousel track.
+*/
+
+.project-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/*
+Three cards are displayed at once on desktop.
+*/
+
 .project-card {
+    flex: 0 0 calc((100% - 2rem) / 3);
+    min-width: 0;
+
     border-radius: 1rem;
     padding: 1.1rem;
+
     display: grid;
+    align-content: start;
     gap: 0.9rem;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .project-card p {
@@ -249,19 +340,101 @@ h1 {
     font-size: 0.9rem;
 }
 
+/* ==========================================================
+   PROJECT LINKS
+   ========================================================== */
+
+.project-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.4rem;
+}
+
 .project-links a {
+    display: inline-block;
     color: var(--text);
     text-decoration: none;
+
     padding: 0.55rem 0.8rem;
     border: 1px solid var(--line);
     border-radius: 0.6rem;
-    transition: transform 0.25s ease, border-color 0.25s ease;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
 }
 
 .project-links a:hover {
     transform: translateY(-2px);
     border-color: var(--accent-2);
+    background: rgba(0, 208, 255, 0.08);
 }
+
+/* ==========================================================
+   CAROUSEL ARROWS
+   ========================================================== */
+
+.project-arrow {
+    flex: 0 0 auto;
+
+    width: 2.8rem;
+    height: 2.8rem;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+
+    background: rgba(20, 26, 44, 0.88);
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 1.35rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.project-arrow:hover {
+    transform: scale(1.08);
+    border-color: var(--accent-2);
+    background: rgba(124, 92, 255, 0.38);
+}
+
+.project-arrow:active {
+    transform: scale(0.96);
+}
+
+.project-arrow:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 3px;
+}
+
+.project-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==========================================================
+   PROJECT CARD FLOATING ANIMATION
+   ========================================================== */
 
 .floating {
     animation: bob 5s ease-in-out infinite;
@@ -275,8 +448,11 @@ h1 {
     animation-delay: -3.1s;
 }
 
-@keyframes bob {
+.floating:nth-child(4) {
+    animation-delay: -4.2s;
+}
 
+@keyframes bob {
     0%,
     100% {
         transform: translateY(0);
@@ -286,6 +462,10 @@ h1 {
         transform: translateY(-6px);
     }
 }
+
+/* ==========================================================
+   CONTACT SECTION
+   ========================================================== */
 
 .contact-panel {
     border-radius: 1rem;
@@ -306,16 +486,26 @@ h1 {
     border-color: currentColor;
 }
 
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
 .site-footer {
     padding: 2rem 1rem 3rem;
     text-align: center;
     color: var(--muted);
 }
 
+/* ==========================================================
+   SCROLL REVEAL ANIMATION
+   ========================================================== */
+
 .reveal {
     opacity: 0;
     transform: translateY(26px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
 }
 
 .reveal.visible {
@@ -323,33 +513,9 @@ h1 {
     transform: translateY(0);
 }
 
-@media (max-width: 760px) {
-    .site-header {
-        border-radius: 1rem;
-    }
-
-    .menu-toggle {
-        display: inline-block;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 1rem;
-        top: 4rem;
-        flex-direction: column;
-        width: min(60vw, 13rem);
-        padding: 0.8rem;
-        border-radius: 0.8rem;
-        background: #0f1731;
-        border: 1px solid var(--line);
-        display: none;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-}
-
+/* ==========================================================
+   CARD LINKS
+   ========================================================== */
 
 .card-link {
     text-decoration: none;
@@ -364,8 +530,18 @@ h1 {
     display: flex;
 }
 
+/* ==========================================================
+   QUANTUM THEME
+   ========================================================== */
+
 .quantum-theme {
-    background: radial-gradient(circle at 8% 10%, #1e2e66, #070b14 45%), var(--bg);
+    background:
+        radial-gradient(
+            circle at 8% 10%,
+            #1e2e66,
+            #070b14 45%
+        ),
+        var(--bg);
 }
 
 .quantum-theme::before {
@@ -379,4 +555,123 @@ h1 {
 .quantum-theme .hero h1::after {
     content: " ⚛";
     color: #7ef1ff;
+}
+
+/* ==========================================================
+   TABLET LAYOUT
+   Two cards visible
+   ========================================================== */
+
+@media (max-width: 1000px) and (min-width: 761px) {
+    .project-card {
+        flex-basis: calc((100% - 1rem) / 2);
+    }
+}
+
+/* ==========================================================
+   MOBILE LAYOUT
+   One card visible
+   ========================================================== */
+
+@media (max-width: 760px) {
+    .site-header {
+        border-radius: 1rem;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 1rem;
+        top: 4rem;
+
+        flex-direction: column;
+
+        width: min(60vw, 13rem);
+        padding: 0.8rem;
+
+        border-radius: 0.8rem;
+        background: #0f1731;
+        border: 1px solid var(--line);
+
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .project-carousel {
+        gap: 0.45rem;
+    }
+
+    .project-card {
+        flex-basis: 100%;
+    }
+
+    .project-arrow {
+        width: 2.35rem;
+        height: 2.35rem;
+        font-size: 1.05rem;
+    }
+
+    .project-links {
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================
+   VERY SMALL SCREENS
+   ========================================================== */
+
+@media (max-width: 460px) {
+    .section {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .project-carousel {
+        position: relative;
+        padding-bottom: 3.3rem;
+    }
+
+    .project-prev,
+    .project-next {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    .project-prev {
+        left: calc(50% - 3.1rem);
+    }
+
+    .project-next {
+        right: calc(50% - 3.1rem);
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+}
+
+/* ==========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
