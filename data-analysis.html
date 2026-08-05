@@ -8,13 +8,15 @@
     <title>Data Analysis | Nimeesh</title>
 
     <meta name="description"
-        content="Data analysis projects by Nimeesh, including an exploratory study of exoplanets using data from the NASA Exoplanet Archive." />
+        content="Data analysis projects by Nimeesh, including exploratory studies using scientific and financial datasets." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
-        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+        rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -75,140 +77,188 @@
 
             </div>
 
-            <div class="project-grid">
+            <!-- Project carousel -->
 
-                <article class="project-card glass">
+            <div class="project-carousel">
 
-                    <h3>
-                        Transit vs Radial Velocity: What Do They Reveal About
-                        Exoplanets?
-                    </h3>
+                <button
+                    type="button"
+                    class="project-arrow project-prev"
+                    aria-label="Show previous project"
+                >
+                    &#10094;
+                </button>
 
-                    <p>
-                        An exploratory analysis of confirmed exoplanets from the
-                        NASA Exoplanet Archive. I compared the orbital-period and
-                        reported-mass distributions of planets discovered through
-                        the Transit and Radial Velocity methods.
-                    </p>
+                <div class="project-grid">
 
-                    <p>
-                        The project also examines duplicate records, missing
-                        measurements, unequal sample sizes, mass provenance, detection
-                        bias, and an apparent valley in the observed planet-mass
-                        distribution.
-                    </p>
+                    <!-- Project 1 -->
 
-                    <div class="project-links">
+                    <article class="project-card glass">
 
-                        <a href="assets/Data Analysis/Project 1/Data_Analysis_One.pdf"
-                            target="_blank"
-                            rel="noreferrer">
-                            Open Report
-                        </a>
+                        <h3>
+                            Transit vs Radial Velocity: What Do They Reveal About
+                            Exoplanets?
+                        </h3>
 
-                        <a href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%201(%20Nasa%20Exoplanets)"
-                            target="_blank"
-                            rel="noreferrer">
-                            View Code
-                        </a>
+                        <p>
+                            An exploratory analysis of confirmed exoplanets from the
+                            NASA Exoplanet Archive. I compared the orbital-period and
+                            reported-mass distributions of planets discovered through
+                            the Transit and Radial Velocity methods.
+                        </p>
 
-                    </div>
+                        <p>
+                            The project also examines duplicate records, missing
+                            measurements, unequal sample sizes, mass provenance,
+                            detection bias, and an apparent valley in the observed
+                            planet-mass distribution.
+                        </p>
 
-                    <span>
-                        Python • Pandas • NumPy • Matplotlib • NASA Exoplanet Archive
-                    </span>
+                        <div class="project-links">
 
-                </article>
-                 
-                <article class="project-card glass">
+                            <a
+                                href="assets/Data Analysis/Project 1/Data_Analysis_One.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Open Report
+                            </a>
 
-                    <h3>
-                        Finding a B± Mass Peak in CERN Open Data
-                    </h3>
+                            <a
+                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%201(%20Nasa%20Exoplanets)"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                View Code
+                            </a>
 
-                    <p>
-                        My first attempt at analysing an LHCb ROOT file using Python. 
-                        I extracted the reconstructed B± candidate mass, plotted its 
-                        distribution, and fitted the visible peak with a simple Gaussian-plus
-                        -background model. The project focuses on learning ROOT file 
-                        structure, histogram fitting, and the limits of interpreting 
-                        unfamiliar scientific data.
-                    </p>
+                        </div>
 
-                    <div class="project-links">
+                        <span>
+                            Python • Pandas • NumPy • Matplotlib • NASA Exoplanet Archive
+                        </span>
 
-                        <a href="assets/Data Analysis/Data Analysis 2(CERN 2017 B+)/Data_analysis_2.pdf"
-                            target="_blank"
-                            rel="noreferrer">
-                            Open Report
-                        </a>
+                    </article>
 
-                        <a href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%202(CERN%202017%20B%2B)"
-                            target="_blank"
-                            rel="noreferrer">
-                            View Code
-                        </a>
+                    <!-- Project 2 -->
 
-                    </div>
+                    <article class="project-card glass">
 
-                    <span>
-                        Python • Pandas • NumPy • Matplotlib • CERN open dataset
-                    </span>
+                        <h3>
+                            Finding a B± Mass Peak in CERN Open Data
+                        </h3>
 
-                </article>
+                        <p>
+                            My first attempt at analysing an LHCb ROOT file using
+                            Python. I extracted the reconstructed B± candidate mass,
+                            plotted its distribution, and fitted the visible peak with
+                            a simple Gaussian-plus-background model. The project
+                            focuses on learning ROOT file structure, histogram fitting,
+                            and the limits of interpreting unfamiliar scientific data.
+                        </p>
 
-                 <article class="project-card glass">
+                        <div class="project-links">
 
-                    <h3>
-                        Do UBS and USD/CHF Converge?
-                    </h3>
+                            <a
+                                href="assets/Data Analysis/Data Analysis 2(CERN 2017 B+)/Data_analysis_2.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Open Report
+                            </a>
 
-                    <p>
-                        I tested whether UBS stock and the USD/CHF exchange rate repeatedly return to a stable relative level after diverging. A five-year analysis found almost zero daily return correlation and a persistent trend in relative performance, rejecting the original hypothesis for this pair.
-                    </p>
+                            <a
+                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%202(CERN%202017%20B%2B)"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                View Code
+                            </a>
 
-                    <div class="project-links">
+                        </div>
 
-                        <a href="assets/Data Analysis/Data Analysis 3(UBS and Forex)/Data_Analysis_3.pdf"
-                            target="_blank"
-                            rel="noreferrer">
-                            Open Report
-                        </a>
+                        <span>
+                            Python • Pandas • NumPy • Matplotlib • CERN Open Dataset
+                        </span>
 
-                        <a href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%203(UBS%20and%20Forex)"
-                            target="_blank"
-                            rel="noreferrer">
-                            View Code
-                        </a>
+                    </article>
 
-                    </div>
+                    <!-- Project 3 -->
 
-                    <span>
-                        Python • Pandas • NumPy • Matplotlib • yfinance • Financial Data Analysis
-                    </span>
+                    <article class="project-card glass">
 
-                </article>
+                        <h3>
+                            Do UBS and USD/CHF Converge?
+                        </h3>
 
-                <article class="project-card glass">
+                        <p>
+                            I tested whether UBS stock and the USD/CHF exchange rate
+                            repeatedly return to a stable relative level after
+                            diverging. A five-year analysis found almost zero daily
+                            return correlation and a persistent trend in relative
+                            performance, rejecting the original hypothesis for this
+                            pair.
+                        </p>
 
-                    <h3>More Projects Coming Soon</h3>
+                        <div class="project-links">
 
-                    <p>
-                        I am continuing to work with scientific datasets and develop
-                        stronger foundations in statistics, visualisation, and
-                        research-oriented data analysis. Future projects will be
-                        added here as I complete them.
-                    </p>
+                            <a
+                                href="assets/Data Analysis/Data Analysis 3(UBS and Forex)/Data_Analysis_3.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Open Report
+                            </a>
 
-                    <span>Statistics • Scientific Data • Research</span>
+                            <a
+                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%203(UBS%20and%20Forex)"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                View Code
+                            </a>
 
-                </article>
+                        </div>
+
+                        <span>
+                            Python • Pandas • NumPy • Matplotlib • yfinance • Quantitative Finance
+                        </span>
+
+                    </article>
+
+                    <!-- Coming soon card -->
+
+                    <article class="project-card glass">
+
+                        <h3>More Projects Coming Soon</h3>
+
+                        <p>
+                            I am continuing to work with scientific datasets and
+                            develop stronger foundations in statistics, visualisation,
+                            and research-oriented data analysis. Future projects will
+                            be added here as I complete them.
+                        </p>
+
+                        <span>
+                            Statistics • Scientific Data • Research
+                        </span>
+
+                    </article>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="project-arrow project-next"
+                    aria-label="Show next project"
+                >
+                    &#10095;
+                </button>
 
             </div>
 
         </section>
 
-        
     </main>
 
     <footer class="site-footer">
