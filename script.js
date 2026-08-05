@@ -39,3 +39,57 @@ document.addEventListener("pointermove", (event) => {
     glow.style.left = `${event.clientX}px`;
     glow.style.top = `${event.clientY}px`;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const projectTrack = document.querySelector(".project-grid");
+    const previousButton = document.querySelector(".project-prev");
+    const nextButton = document.querySelector(".project-next");
+
+    // Prevent errors on pages without the project carousel
+    if (!projectTrack || !previousButton || !nextButton) {
+        return;
+    }
+
+    function getScrollDistance() {
+        const card = projectTrack.querySelector(".project-card");
+
+        if (!card) {
+            return 0;
+        }
+
+        const trackStyles = window.getComputedStyle(projectTrack);
+        const gap = parseFloat(trackStyles.gap) || 0;
+
+        return card.getBoundingClientRect().width + gap;
+    }
+
+    function updateArrowState() {
+        const maximumScroll =
+            projectTrack.scrollWidth - projectTrack.clientWidth;
+
+        previousButton.disabled = projectTrack.scrollLeft <= 5;
+
+        nextButton.disabled =
+            projectTrack.scrollLeft >= maximumScroll - 5;
+    }
+
+    previousButton.addEventListener("click", () => {
+        projectTrack.scrollBy({
+            left: -getScrollDistance(),
+            behavior: "smooth"
+        });
+    });
+
+    nextButton.addEventListener("click", () => {
+        projectTrack.scrollBy({
+            left: getScrollDistance(),
+            behavior: "smooth"
+        });
+    });
+
+    projectTrack.addEventListener("scroll", updateArrowState);
+
+    window.addEventListener("resize", updateArrowState);
+
+    updateArrowState();
+});
