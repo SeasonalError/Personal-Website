@@ -291,7 +291,7 @@ The project grid now acts as the horizontal carousel track.
 
 .project-grid {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 1rem;
     width: 100%;
     min-width: 0;
@@ -323,8 +323,8 @@ Three cards are displayed at once on desktop.
     border-radius: 1rem;
     padding: 1.1rem;
 
-    display: grid;
-    align-content: start;
+    display: flex;
+    flex-direction: column;
     gap: 0.9rem;
 
     scroll-snap-align: start;
@@ -349,7 +349,8 @@ Three cards are displayed at once on desktop.
     align-items: center;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.4rem;
 }
 
 .project-links a {
