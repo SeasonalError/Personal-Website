@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recommended Readings | Your Name</title>
-    <meta name="description" content="A full reading list of recommended books and papers curated by Your Name." />
+    <title>Recommended Readings | Nimeesh</title>
+    <meta name="description" content="Books and papers I've read and recommend across physics, philosophy, and other subjects." />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -16,7 +18,8 @@
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header glass">
-        <a class="brand" href="index.html">YN</a>
+        <a class="brand" href="index.html">NSK</a>
+
         <nav>
             <ul class="nav-links always-open">
                 <li><a href="index.html">Home</a></li>
@@ -27,43 +30,149 @@
     </header>
 
     <main data-page class="page active">
+
+        <!-- Hero -->
         <section class="hero section reveal">
             <p class="eyebrow">Reading Library</p>
+
             <h1>Things I Recommend Reading</h1>
+
             <p class="lead">
-                A single place to browse the books and papers I've read and recommend.
+                Books and papers I've read, enjoyed, and found worth recommending.
+                Mostly physics, with some philosophy along the way.
             </p>
         </section>
 
+
+        <!-- Books -->
         <section id="books" class="section reveal">
+
             <div class="section-head">
                 <h2>Books</h2>
             </div>
-            <div class="project-grid">
-                <article class="project-card glass">
-                    <h3>Book Title 01</h3>
-                    <p>Why I recommend this book.</p>
-                    <a href="https://example.com" target="_blank" rel="noreferrer">View Link</a>
-                </article>
+
+
+            <!-- Physics -->
+            <div class="section-head">
+                <p class="eyebrow">Physics</p>
             </div>
+
+            <div class="project-grid">
+
+                <article class="project-card glass">
+                    <p class="eyebrow">Quantum Mechanics</p>
+                    <h3>Quantum Mechanics</h3>
+                    <p>
+                        <strong>Leonard I. Schiff</strong><br>
+                        A rigorous introduction to quantum mechanics and one of the books
+                        I've used while building my foundations in the subject.
+                    </p>
+                </article>
+
+
+                <article class="project-card glass">
+                    <p class="eyebrow">Quantum Mechanics</p>
+                    <h3>Modern Quantum Mechanics</h3>
+                    <p>
+                        <strong>J. J. Sakurai & Jim Napolitano</strong><br>
+                        A more modern and elegant treatment of quantum mechanics.
+                        Particularly useful once the basic formalism is already familiar.
+                    </p>
+                </article>
+
+
+                <article class="project-card glass">
+                    <p class="eyebrow">Classical Mechanics</p>
+                    <h3>Classical Mechanics</h3>
+                    <p>
+                        <strong>John R. Taylor</strong><br>
+                        A clear and approachable introduction to classical mechanics,
+                        from Newtonian mechanics to more advanced ideas.
+                    </p>
+                </article>
+
+
+                <article class="project-card glass">
+                    <p class="eyebrow">Electromagnetism</p>
+                    <h3>Introduction to Electrodynamics</h3>
+                    <p>
+                        <strong>David J. Griffiths</strong><br>
+                        An excellent introduction to electromagnetism with a balance of
+                        physical intuition, mathematics, and problems.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <!-- Philosophy -->
+            <div class="section-head">
+                <p class="eyebrow">Philosophy</p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project-card glass">
+                    <h3>The Denial of Death</h3>
+                    <p>
+                        <strong>Ernest Becker</strong><br>
+                        An exploration of death, fear, meaning, and how our awareness of
+                        mortality shapes human behaviour.
+                    </p>
+                </article>
+
+
+                <article class="project-card glass">
+                    <h3>The Myth of Sisyphus</h3>
+                    <p>
+                        <strong>Albert Camus</strong><br>
+                        Camus begins with one of philosophy's most uncomfortable questions:
+                        if life has no inherent meaning, why continue living?
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
+
+        <!-- Papers -->
         <section id="papers" class="section reveal">
+
             <div class="section-head">
-                <h2>Papers</h2>
+                <h2>Papers & Articles</h2>
             </div>
+
             <div class="project-grid">
+
                 <article class="project-card glass">
-                    <h3>Paper Title 01</h3>
-                    <p>Key insight from this paper.</p>
-                    <a href="assets/readings/paper-01.pdf">Open PDF</a>
+                    <p class="eyebrow">QCD · Strong Interaction</p>
+
+                    <h3>An Introduction to QCD and the Strong Force</h3>
+
+                    <p>
+                        I really enjoyed reading this. It was a great place to start
+                        learning about QCD and the strong interaction without immediately
+                        diving too deeply into the full machinery of quantum field theory.
+                    </p>
+
+                    <a
+                        href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvcyFBcGJuYjZWTFkxUnBsUFJkTDBKNFdtLXRselFkLVE%5FZT1oZFp4SEg&cid=6954634BA56FE796&id=6954634BA56FE796%21342621&parId=6954634BA56FE796%2154312&o=OneUp"
+                        target="_blank"
+                        rel="noreferrer">
+                        Read Paper →
+                    </a>
                 </article>
+
             </div>
+
         </section>
+
     </main>
 
+
     <footer class="site-footer">
-        <p>© <span id="year"></span> Your Name. Recommended readings.</p>
+        <p>© <span id="year"></span> Nimeesh. Recommended readings.</p>
     </footer>
 
     <script src="script.js"></script>
