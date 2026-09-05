@@ -71,7 +71,7 @@ The main portfolio, data-analysis page and reading library use `styles.css` and 
 
 ### Particle Physics page (`particle-physics.html`)
 
-The page contains a cinematic detector hero, the study roadmap, an illustrative animated track display, three existing notes, two LHCb reports and a reading shelf. The older `quantum-chemistry.html` URL redirects here and preserves section fragments such as `#my-notes` and `#recommended`.
+The page contains a cinematic detector hero, the study roadmap, an illustrative animated track display, three existing notes, two LHCb reports and a reading shelf. The older `quantum-chemistry.html` URL redirects here and preserves section fragments such as `#my-notes` and `#recommended` when JavaScript is available. With JavaScript disabled or blocked, it retains those bookmarked sections and provides direct links to their new destinations instead of dropping the fragment through a meta refresh.
 
 #### Update published progress
 

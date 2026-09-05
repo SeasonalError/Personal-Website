@@ -20,8 +20,11 @@
     <header class="site-header glass">
         <a class="brand" href="index.html">NSK</a>
 
-        <nav>
-            <ul class="nav-links always-open">
+        <nav aria-label="Reading library navigation">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+                Menu
+            </button>
+            <ul id="primary-nav" class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#books">Books</a></li>
                 <li><a href="#papers">Papers</a></li>
