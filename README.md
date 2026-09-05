@@ -1,11 +1,13 @@
-# Personal Website Starter
+# Personal Website
 
 This project is a static personal portfolio website made with plain **HTML + CSS + JavaScript**.
 
 ## Pages included
 
 - `index.html` → Main portfolio page.
-- `quantum-chemistry.html` → Dedicated Quantum Chemistry page (notes + recommended readings).
+- `particle-physics.html` → Particle Physics reading journey, local checklist, notes and research resources.
+- `quantum-chemistry.html` → Compatibility redirect to the Particle Physics page.
+- `data-analysis.html` → Scientific and financial data-analysis projects.
 - `recommended-readings.html` → Global recommended reading library page.
 
 ## 1) Run it locally
@@ -58,39 +60,51 @@ Then open:
 
 ## 3) How to edit your website content
 
-All content is in HTML files, style is in `styles.css`, and behavior is in `script.js`.
+The main portfolio, data-analysis page and reading library use `styles.css` and `script.js`. The particle physics page uses its own `particle-physics.css` and `particle-physics.js`, so its design can evolve independently.
 
 ### Main page edits (`index.html`)
 
 - Change your name in title, hero heading, and footer.
 - Edit project cards inside `#projects`.
-- The **Quantum Chemistry** card already routes to a separate page (`quantum-chemistry.html`) in the same tab.
+- The **Particle Physics** card routes to `particle-physics.html` in the same tab.
 - Edit the **Things I Recommend Reading** section and button link.
 
-### Quantum Chemistry page edits (`quantum-chemistry.html`)
+### Particle Physics page (`particle-physics.html`)
 
-This page has two sections:
+The page contains a cinematic detector hero, the study roadmap, an illustrative animated track display, three existing notes, two LHCb reports and a reading shelf. The older `quantum-chemistry.html` URL redirects here and preserves section fragments such as `#my-notes` and `#recommended`.
 
-1. **My Notes (PDF Library)**
-2. **Recommended Readings**
+#### Update published progress
 
-#### How to add your notes PDFs
+Each roadmap row has a stable `data-milestone` identifier. Add or remove the `checked` attribute in the HTML to change the **published** completion status. Keep the snapshot date, initial count, and `<progress>` value in sync. If adding or removing milestones, update the displayed total and progress maximum as well.
 
-1. Create folder:
-   - `assets/quantum-notes/`
-2. Upload PDFs there (example: `lecture-notes-03.pdf`).
-3. Add a new card in `quantum-chemistry.html` linking to that file:
+The initial snapshot is based on study progress through 5 September 2026: five foundations covered, with special relativity and second quantization ahead of the particle physics and QCD goals. These are study milestones, not claims of mastery.
 
-```html
-<a href="assets/quantum-notes/lecture-notes-03.pdf">Open PDF</a>
-```
+Checkbox changes made in a browser are **local to that browser and origin**. They persist in `localStorage` under `nsk-particle-physics-progress-v1`; no visitor changes the public website or another person's progress. “Reset to published progress” restores the defaults in the HTML. When storage is blocked, edits work for the current visit and the page explains that they could not be saved. Old saved values can be cleared with the reset control when published progress changes.
 
-#### How to add recommended readings
+#### Notes and links
 
-- For external paper/book links, use a normal URL in `<a href="https://...">`.
-- For uploaded paper PDFs, place files in:
-  - `assets/quantum-readings/`
-  and link to them.
+The original PDFs remain under `assets/quantum-notes/`. Add new note links in `#my-notes`. The CERN reports remain at their original paths. Add resources in `#recommended`; no carousel script or dependency is required.
+
+#### Motion and accessibility
+
+- The hero combines an original conceptual detector image with moving illustrative traces and subtle pointer parallax.
+- The transverse detector drawing is illustrative, not a recorded event or quantitative simulation.
+- “Pause motion” stops animation and is remembered locally. The initial state respects `prefers-reduced-motion`.
+- Animation pauses in hidden tabs and offscreen sections, and canvas resolution is capped for device performance.
+- Content and PDF links remain visible without JavaScript. Keyboard focus, native checkboxes and reduced-motion styles are included.
+
+#### Design and assets
+
+The Particle Physics page uses a graphite palette, ice-blue text, amber accents, condensed display type and ruled notebook layouts. It does not load the portfolio's shared CSS or JavaScript. Change its tokens at the top of `particle-physics.css`.
+
+All required visual assets and fonts are self-hosted under `assets/particle-physics/`. There are no runtime CDN scripts, tracking libraries, package installation steps or build tools.
+
+- `detector-hero.webp`: original AI-generated conceptual artwork created for this project, compressed to WebP. It is not a photograph of a real CERN detector. The conceptual-art label is visible on desktop.
+- Barlow Condensed, Manrope and IBM Plex Mono: sourced through Google Fonts, with SIL Open Font License notices included alongside the font files. Font source: [Google Fonts repository](https://github.com/google/fonts).
+- [Feynman Lectures, Volume III](https://www.feynmanlectures.caltech.edu/III_toc.html)
+- [MIT 8.06: Scattering and Identical Particles](https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2018/pages/video-lectures/scattering-and-identical-particles/)
+- [CERN: The Standard Model](https://home.cern/science/physics/standard-model/)
+- Schiff and FloatHeadPhysics are retained from the original reading page.
 
 ### Global reading page edits (`recommended-readings.html`)
 
@@ -106,7 +120,7 @@ In `styles.css`, edit variables under `:root`:
 - `--accent-2`
 - `--bg`
 
-Quantum Chemistry page has an additional class-based theme (`.quantum-theme`) that you can tweak.
+The Particle Physics page has a separate stylesheet. Its `:root` tokens are independent of the portfolio theme.
 
 ---
 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a0b">
+  <title>Particle Physics | Nimeesh</title>
+  <meta name="description" content="Nimeesh's reading journey from quantum mechanics to particle physics: study milestones, personal notes, CERN open-data projects and reading resources.">
+  <link rel="stylesheet" href="assets/particle-physics/fonts.css">
+  <link rel="stylesheet" href="particle-physics.css">
+  <link rel="preload" href="assets/particle-physics/detector-hero.webp" as="image" fetchpriority="high">
+  <script src="particle-physics.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="masthead">
+    <a class="brand" href="index.html" aria-label="Nimeesh's main portfolio">NSK<span class="brand-divider">/</span><span class="brand-sub">FIELD NOTES</span></a>
+    <nav aria-label="Particle physics navigation">
+      <a href="#journey">The journey</a>
+      <a href="#my-notes">My notes</a>
+      <a href="#recommended">Reading shelf</a>
+    </nav>
+    <a class="return-link" href="index.html">Back to portfolio <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-scene" aria-hidden="true">
+        <img id="detector" src="assets/particle-physics/detector-hero.webp" width="1672" height="941" alt="" fetchpriority="high">
+        <canvas id="hero-tracks"></canvas>
+      </div>
+      <div class="hero-content wrap">
+        <p class="eyebrow hero-kicker"><span class="chapter-marker">01</span> A READING PROJECT BY NIMEESH</p>
+        <h1 id="page-title">PARTICLE<br><span>PHYSICS<span class="title-period">.</span></span></h1>
+        <p class="hero-copy">Following the questions<br>to the smallest scales.</p>
+        <a class="primary-link" href="#journey">Explore the journey <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-bottom wrap">
+        <span class="micro">QUANTUM THEORY / HIGH-ENERGY PHYSICS</span>
+        <div class="hero-controls"><span class="micro render-label">DETECTOR STUDY · CONCEPTUAL ART</span><button id="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span id="motion-label">Pause motion</span></button></div>
+      </div>
+    </section>
+
+    <div class="signal-strip wrap">
+      <div><span class="micro">THE FOUNDATION</span><p>Quantum mechanics</p></div>
+      <div><span class="micro">THE NEXT STEP</span><p>Second quantization</p></div>
+      <div><span class="micro">THE DIRECTION</span><p>Particle physics &amp; QCD</p></div>
+      <a href="#my-notes"><span class="micro">THE NOTEBOOK</span><p>03 published notes <span aria-hidden="true">↗</span></p></a>
+    </div>
+
+    <section class="intro wrap section-spacing" aria-labelledby="intro-title">
+      <div class="section-index" data-reveal><span class="eyebrow">THE QUESTION</span><span class="index-rule"></span></div>
+      <h2 id="intro-title" data-reveal>What is the world<br><span class="subtle">really made of?</span></h2>
+      <div class="intro-copy" data-reveal>
+        <p>I'm a physics undergraduate at Ashoka University. This is my record of learning the quantum mechanics, mathematics and physical intuition that lead into particle physics.</p>
+        <p>My reading project with Prof. Sourav Pal has taken me through scattering, identical particles and spin. His next direction: learn second quantization. Alongside that, I'm building the relativity foundations I need.</p>
+        <a class="text-link" href="#journey">Where I am now <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section id="journey" class="journey wrap section-spacing" aria-labelledby="journey-title">
+      <div class="journey-summary" data-reveal>
+        <p class="eyebrow">01 / THE JOURNEY</p>
+        <h2 id="journey-title">One layer<br>deeper.</h2>
+        <p class="section-copy">What I've worked through, what comes next, and the questions on the horizon.</p>
+        <div class="completion-display"><span id="completed-count">05</span><span class="completion-total">/ 10</span></div>
+        <p class="micro">MILESTONES COVERED</p>
+        <progress id="journey-progress" max="10" value="5" aria-label="Reading milestones covered">5 of 10</progress>
+        <p class="snapshot">Published progress · <time datetime="2026-09-05">5 September 2026</time><br>“Covered” means studied, with room to revisit.</p>
+        <div class="local-tools" hidden>
+          <p id="save-status" class="local-status" role="status">Checklist changes stay in this browser.</p>
+          <button id="reset-progress" class="text-button" type="button">Reset to published progress <span aria-hidden="true">↺</span></button>
+        </div>
+        <noscript><p class="snapshot">This is the published checklist. Enable JavaScript to save changes on this device.</p></noscript>
+      </div>
+      <div class="milestones">
+        <fieldset data-reveal>
+          <legend><span class="phase-number">I</span> The foundations <span class="phase-note">WORKED THROUGH</span></legend>
+          <label class="milestone"><input type="checkbox" data-milestone="formalism" checked><span class="checkmark" aria-hidden="true"></span><span><strong>The language of quantum mechanics</strong><small>States, wavefunctions, operators and uncertainty.</small></span><span class="milestone-number" aria-hidden="true">01</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="bound-states" checked><span class="checkmark" aria-hidden="true"></span><span><strong>Bound states &amp; discrete energies</strong><small>Potential wells, boundary conditions and the oscillator.</small></span><span class="milestone-number" aria-hidden="true">02</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="approximations" checked><span class="checkmark" aria-hidden="true"></span><span><strong>Approximation methods</strong><small>Building tools for systems without exact solutions.</small></span><span class="milestone-number" aria-hidden="true">03</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="scattering" checked><span class="checkmark" aria-hidden="true"></span><span><strong>Scattering &amp; collision theory</strong><small>Cross sections, partial waves and phase shifts.</small></span><span class="milestone-number" aria-hidden="true">04</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="identical-particles" checked><span class="checkmark" aria-hidden="true"></span><span><strong>Identical particles &amp; spin</strong><small>Exchange symmetry, bosons, fermions and exclusion.</small></span><span class="milestone-number" aria-hidden="true">05</span></label>
+        </fieldset>
+        <fieldset class="next-phase" data-reveal>
+          <legend><span class="phase-number">II</span> The bridge <span class="phase-note">NEXT UP</span></legend>
+          <label class="milestone"><input type="checkbox" data-milestone="relativity"><span class="checkmark" aria-hidden="true"></span><span><strong>Special relativity foundations</strong><small>Lorentz transformations, four-vectors and relativistic kinematics.</small></span><span class="milestone-number" aria-hidden="true">06</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="second-quantization"><span class="checkmark" aria-hidden="true"></span><span><strong>Second quantization <span class="focus-tag">READING DIRECTION</span></strong><small>Occupation numbers, Fock space, creation and annihilation operators.</small></span><span class="milestone-number" aria-hidden="true">07</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="particle-physics"><span class="checkmark" aria-hidden="true"></span><span><strong>Particle physics fundamentals</strong><small>Particles, interactions, conservation laws and the Standard Model.</small></span><span class="milestone-number" aria-hidden="true">08</span></label>
+        </fieldset>
+        <fieldset data-reveal>
+          <legend><span class="phase-number">III</span> The horizon <span class="phase-note">LONGER TERM</span></legend>
+          <label class="milestone"><input type="checkbox" data-milestone="qcd"><span class="checkmark" aria-hidden="true"></span><span><strong>Understand the strong interaction</strong><small>Build toward QCD, colour and confinement.</small></span><span class="milestone-number" aria-hidden="true">09</span></label>
+          <label class="milestone"><input type="checkbox" data-milestone="collider-analysis"><span class="checkmark" aria-hidden="true"></span><span><strong>Connect theory with collider data</strong><small>Return to CERN open data with stronger physics and statistical tools.</small></span><span class="milestone-number" aria-hidden="true">10</span></label>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="event-section" aria-labelledby="event-title">
+      <div class="event-inner wrap">
+        <div class="event-copy" data-reveal>
+          <p class="eyebrow">FROM THEORY TO A TRACE</p>
+          <h2 id="event-title">The invisible<br>leaves a signature.</h2>
+          <p>Scattering is where abstract wavefunctions meet something we can measure. It's also where my reading starts to connect with my data projects.</p>
+          <a class="text-link" href="#experiments">Into the data <span aria-hidden="true">↘</span></a>
+        </div>
+        <figure class="event-display">
+          <canvas id="event-tracks" role="img" aria-label="Illustrative cross-section of a particle detector with curved tracks spreading from an interaction point. This is conceptual, not experimental data."></canvas>
+          <figcaption class="micro"><span>TRANSVERSE VIEW</span><span>ILLUSTRATIVE TRACKS / NOT EVENT DATA</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="my-notes" class="notes wrap section-spacing" aria-labelledby="notes-title">
+      <div class="section-heading" data-reveal><div><p class="eyebrow">02 / THE NOTEBOOK</p><h2 id="notes-title">Thinking, on paper.</h2></div><p class="section-copy">My quantum foundations, written out.<br>Three notes from the reading project.</p></div>
+      <div class="note-list">
+        <a class="note" href="assets/quantum-notes/why-quantum-mechanics.pdf" target="_blank" rel="noreferrer" data-reveal>
+          <span class="note-index">01</span><div><span class="micro">QUANTUM FOUNDATIONS</span><h3>Why quantum mechanics?</h3><p>Blackbody radiation, the photoelectric effect, atomic stability and line spectra.</p></div><span class="note-format">PDF <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+        <a class="note" href="assets/quantum-notes/uncertainty_and_wavefunction.pdf" target="_blank" rel="noreferrer" data-reveal>
+          <span class="note-index">02</span><div><span class="micro">STATES &amp; OPERATORS</span><h3>From uncertainty to the<br class="desktop-break"> Schrödinger equation</h3><p>Matter waves, uncertainty, wavefunctions and the mathematical language of QM.</p></div><span class="note-format">PDF <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+        <a class="note" href="assets/quantum-notes/Discrete_Energy.pdf" target="_blank" rel="noreferrer" data-reveal>
+          <span class="note-index">03</span><div><span class="micro">BOUND SYSTEMS</span><h3>Discrete eigenvalues:<br class="desktop-break"> bound states</h3><p>Energy levels, potential wells, zero-point energy and the harmonic oscillator.</p></div><span class="note-format">PDF <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="experiments" class="experiments wrap section-spacing" aria-labelledby="experiments-title">
+      <div class="experiment-lead" data-reveal><p class="eyebrow">03 / INTO THE DATA</p><h2 id="experiments-title">Real data.<br>Better questions.</h2><p class="section-copy">Early work with LHCb open data. Learning the analysis, testing the assumptions, documenting the mistakes.</p><a class="text-link" href="data-analysis.html">All data projects <span aria-hidden="true">↗</span></a></div>
+      <div class="experiment-panel" data-reveal>
+        <div class="experiment-top"><span class="micro">CERN OPEN DATA / LHCB</span><span class="micro">LEARNING PROJECT</span></div>
+        <div class="decay-equation" aria-label="B plus or minus decays to J psi and K plus or minus">B<sup>±</sup> <span>→</span> J/ψ K<sup>±</sup></div>
+        <article><span class="micro">STUDY 01</span><h3>Finding a B± mass peak</h3><p>Reading a ROOT file, plotting reconstructed candidate masses and trying a Gaussian-plus-background fit.</p><a class="text-link" href="assets/Data%20Analysis/Data%20Analysis%202(CERN%202017%20B%2B)/Data_analysis_2.pdf" target="_blank" rel="noreferrer">Read the report <span aria-hidden="true">↗</span></a></article>
+        <article><span class="micro">STUDY 02</span><h3>Beyond the peak</h3><p>Testing a vertex-quality cut, comparing fit models and looking at residuals. An analysis exercise, not a precision measurement.</p><a class="text-link" href="assets/Data%20Analysis/Data%20Analysis%202(CERN%202017%20B%2B)/Data_Analysis_2_part_2.pdf" target="_blank" rel="noreferrer">Read the follow-up <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+
+    <section id="recommended" class="reading wrap section-spacing" aria-labelledby="reading-title">
+      <div class="section-heading" data-reveal><div><p class="eyebrow">04 / THE READING SHELF</p><h2 id="reading-title">Sources of understanding.</h2></div><a class="text-link" href="recommended-readings.html">Full reading library <span aria-hidden="true">↗</span></a></div>
+      <div class="reading-grid">
+        <article class="resource" data-reveal><span class="micro">01 / THE CORE TEXT</span><h3>Quantum<br>Mechanics</h3><p class="resource-author">Leonard I. Schiff</p><p>The foundation of my reading project. Worked through to identical particles and spin; later chapters remain ahead.</p><span class="resource-foot">BOOK / IN MY READING PROJECT</span></article>
+        <a class="resource" href="https://www.feynmanlectures.caltech.edu/III_toc.html" target="_blank" rel="noreferrer" data-reveal><span class="micro">02 / PHYSICAL INTUITION</span><h3>The Feynman<br>Lectures · III</h3><p class="resource-author">Feynman, Leighton &amp; Sands</p><p>A different way into quantum mechanics, with thought experiments and physical arguments to return to.</p><span class="resource-foot">READ ONLINE <span aria-hidden="true">↗</span></span></a>
+        <a class="resource" href="https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2018/pages/video-lectures/scattering-and-identical-particles/" target="_blank" rel="noreferrer" data-reveal><span class="micro">03 / THE LECTURES</span><h3>Scattering &amp;<br>identical particles</h3><p class="resource-author">MIT OpenCourseWare · 8.06</p><p>Cross sections, partial waves, phase shifts and exchange symmetry. Lectures to revisit alongside my notes.</p><span class="resource-foot">WATCH THE LECTURES <span aria-hidden="true">↗</span></span></a>
+        <a class="resource" href="https://home.cern/science/physics/standard-model/" target="_blank" rel="noreferrer" data-reveal><span class="micro">04 / LOOKING AHEAD</span><h3>The Standard<br>Model</h3><p class="resource-author">CERN</p><p>An overview of fundamental particles and their interactions, and the questions the theory leaves open.</p><span class="resource-foot">EXPLORE AT CERN <span aria-hidden="true">↗</span></span></a>
+      </div>
+      <details class="video-resources" data-reveal><summary><span>Also on my shelf</span> FloatHeadPhysics <span aria-hidden="true">+</span></summary><p>Visual quantum mechanics videos from my original reading page.</p><div><a href="https://youtu.be/60-lbQQUtLU" target="_blank" rel="noreferrer">Video 01 ↗</a><a href="https://youtu.be/ALEDjjAVZSY" target="_blank" rel="noreferrer">Video 02 ↗</a><a href="https://youtu.be/vPW0UYELfOg" target="_blank" rel="noreferrer">Video 03 ↗</a><a href="https://youtu.be/6TXvaWX5OFk" target="_blank" rel="noreferrer">Video 04 ↗</a></div></details>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <div class="footer-top"><p>Still asking<br><span>smaller questions.</span></p><a class="primary-link" href="index.html">Back to my world <span aria-hidden="true">↗</span></a></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Nimeesh S K</span><span>PARTICLE PHYSICS / A WORK IN PROGRESS</span><a href="#main">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
