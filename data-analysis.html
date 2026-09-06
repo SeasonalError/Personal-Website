@@ -1,314 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Data Analysis | Nimeesh</title>
-
-    <meta name="description"
-        content="Data analysis projects by Nimeesh, including exploratory studies using scientific and financial datasets." />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
-        rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c0b">
+  <title>Data Analysis | Nimeesh</title>
+  <meta name="description" content="Four investigations into exoplanets, CERN open data and financial markets. Explore Nimeesh's data analysis projects, findings, reports and Python code.">
+  <link rel="stylesheet" href="assets/particle-physics/fonts.css">
+  <link rel="stylesheet" href="data-analysis.css">
+  <script src="data-analysis.js" defer></script>
 </head>
-
-<body class="data-theme">
-
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <header class="site-header glass">
-
-        <a class="brand" href="index.html">NSK</a>
-
-        <nav>
-            <ul class="nav-links always-open">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">My Projects</a></li>
-                <li><a href="#about-data">About the Project</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <main data-page class="page active">
-
-        <!-- Hero -->
-
-        <section class="hero section reveal">
-
-            <p class="eyebrow">
-                Data Analysis • Python • Scientific Computing
-            </p>
-
-            <h1>Data Analysis</h1>
-
-            <p class="lead">
-                This page documents my journey of learning scientific data analysis
-                through real datasets. Instead of only following tutorials, I am using
-                projects to learn how to clean data, choose meaningful variables,
-                visualise distributions, recognise limitations, and draw careful
-                conclusions from evidence.
-            </p>
-
-        </section>
-
-        <!-- Projects -->
-
-        <section id="projects" class="section reveal">
-
-            <div class="section-head">
-
-                <h2>My Projects</h2>
-
-                <p>
-                    Each project begins with a real dataset and a question that I want
-                    to investigate. I document both the final results and the mistakes,
-                    decisions, and limitations involved in reaching them.
-                </p>
-
-            </div>
-
-            <!-- Project carousel -->
-
-            <div class="project-carousel">
-
-                <button
-                    type="button"
-                    class="project-arrow project-prev"
-                    aria-label="Show previous project"
-                >
-                    &#10094;
-                </button>
-
-                <div class="project-grid">
-
-                    <!-- Project 1 -->
-
-                    <article class="project-card glass">
-
-                        <h3>
-                            Transit vs Radial Velocity: What Do They Reveal About
-                            Exoplanets?
-                        </h3>
-
-                        <p>
-                            An exploratory analysis of confirmed exoplanets from the
-                            NASA Exoplanet Archive. I compared the orbital-period and
-                            reported-mass distributions of planets discovered through
-                            the Transit and Radial Velocity methods.
-                        </p>
-
-                        <p>
-                            The project also examines duplicate records, missing
-                            measurements, unequal sample sizes, mass provenance,
-                            detection bias, and an apparent valley in the observed
-                            planet-mass distribution.
-                        </p>
-
-                        <div class="project-links">
-
-                            <a
-                                href="assets/Data Analysis/Project 1/Data_Analysis_One.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Open Report
-                            </a>
-
-                            <a
-                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%201(%20Nasa%20Exoplanets)"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View Code
-                            </a>
-
-                        </div>
-
-                        <span>
-                            Python • Pandas • NumPy • Matplotlib • NASA Exoplanet Archive
-                        </span>
-
-                    </article>
-
-                    <!-- Project 2 -->
-
-                    <article class="project-card glass">
-
-                        <h3>
-                            Finding a B± Mass Peak in CERN Open Data
-                        </h3>
-
-                        <p>
-                            My first attempt at analysing an LHCb ROOT file using
-                            Python. I extracted the reconstructed B± candidate mass,
-                            plotted its distribution, and fitted the visible peak with
-                            a simple Gaussian-plus-background model. The project
-                            focuses on learning ROOT file structure, histogram fitting,
-                            and the limits of interpreting unfamiliar scientific data.
-                        </p>
-
-                        <div class="project-links">
-
-                            <a
-                                href="assets/Data Analysis/Data Analysis 2(CERN 2017 B+)/Data_analysis_2.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Open Report
-                            </a>
-
-                            <a
-                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%202(CERN%202017%20B%2B)"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View Code
-                            </a>
-
-                        </div>
-
-                        <span>
-                            Python • Pandas • NumPy • Matplotlib • CERN Open Dataset
-                        </span>
-
-                    </article>
-
-                    <!-- Project 3 -->
-
-                    <article class="project-card glass">
-
-                        <h3>
-                            Do UBS and USD/CHF Converge?
-                        </h3>
-
-                        <p>
-                            I tested whether UBS stock and the USD/CHF exchange rate
-                            repeatedly return to a stable relative level after
-                            diverging. A five-year analysis found almost zero daily
-                            return correlation and a persistent trend in relative
-                            performance, rejecting the original hypothesis for this
-                            pair.
-                        </p>
-
-                        <div class="project-links">
-
-                            <a
-                                href="assets/Data Analysis/Data Analysis 3(UBS and Forex)/Data_Analysis_3.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Open Report
-                            </a>
-
-                            <a
-                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%203(UBS%20and%20Forex)"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View Code
-                            </a>
-
-                        </div>
-
-                        <span>
-                            Python • Pandas • NumPy • Matplotlib • yfinance • Quantitative Finance
-                        </span>
-
-                    </article>
-
-                     <!-- Project 4 -->
-
-                    <article class="project-card glass">
-
-                        <h3>
-                           Beyond the B± Mass Peak: Candidate Selection and Model Testing
-                        </h3>
-
-                        <p>
-                            Continuing my LHCb ROOT-file project by testing a vertex-quality cut and comparing linear, quadratic and double-Gaussian fit models. The focus was on learning candidate selection, residuals and model comparison rather than making a physical measurement.
-                        </p>
-
-                        <div class="project-links">
-
-                            <a
-                                href="assets/Data Analysis/Data Analysis 2(CERN 2017 B+)/Data_Analysis_2_part_2.pdf"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Open Report
-                            </a>
-
-                            <a
-                                href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%202(CERN%202017%20B%2B)"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View Code
-                            </a>
-
-                        </div>
-
-                        <span>
-                            Python • Pandas • NumPy • Matplotlib • CERN Open Dataset
-                        </span>
-
-                    </article>
-
-                    <!-- Coming soon card -->
-
-                    <article class="project-card glass">
-
-                        <h3>More Projects Coming Soon</h3>
-
-                        <p>
-                            I am continuing to work with scientific datasets and
-                            develop stronger foundations in statistics, visualisation,
-                            and research-oriented data analysis. Future projects will
-                            be added here as I complete them.
-                        </p>
-
-                        <span>
-                            Statistics • Scientific Data • Research
-                        </span>
-
-                    </article>
-
-                </div>
-
-                <button
-                    type="button"
-                    class="project-arrow project-next"
-                    aria-label="Show next project"
-                >
-                    &#10095;
-                </button>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-
-        <p>
-            © <span id="year"></span> Nimeesh. Data analysis projects and reports.
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
-
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="reading-line" aria-hidden="true"><span id="reading-line"></span></div>
+  <header class="lab-header shell">
+    <a class="lab-brand" href="index.html" aria-label="Nimeesh's portfolio"><span class="brand-mark" aria-hidden="true">n<span>.</span></span><span>NIMEESH <span class="brand-separator">/</span> DATA LAB</span></a>
+    <nav aria-label="Data analysis navigation"><a href="#projects">The work <span class="nav-count">04</span></a><a href="#about-data">The approach</a></nav>
+    <a class="back-link" href="index.html">Portfolio <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="page-title">
+      <div class="hero-overline"><p class="eyebrow"><span class="small-cross" aria-hidden="true">+</span> SCIENTIFIC &amp; FINANCIAL EXPLORATIONS</p><span class="hero-edition mono">A PERSONAL PROJECT ARCHIVE</span></div>
+      <h1 id="page-title">Data analysis<span class="accent">.</span></h1>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h2>Behind every dataset,<br>a question worth asking.</h2>
+          <p>From distant planets to particle collisions and financial markets. I use code to look for patterns, test ideas and learn what the evidence can actually tell us.</p>
+          <a class="button button-primary" href="#projects">Explore the work <span aria-hidden="true">↘</span></a>
+          <div class="hero-index"><span class="index-number">04</span><span>documented studies<br><span class="muted">and plenty still to learn</span></span></div>
+        </div>
+        <figure class="signal-stage" aria-labelledby="signal-caption">
+          <div class="stage-top mono"><span><span class="signal-icon" aria-hidden="true">∿</span> THE SHAPE OF A SIGNAL</span><span aria-hidden="true">[ x, y, z ]</span></div>
+          <canvas id="signal-surface" aria-hidden="true"></canvas>
+          <p class="canvas-fallback" id="surface-fallback">Every point starts a question.</p>
+          <figcaption id="signal-caption"><span class="mono">GENERATIVE STUDY <span class="caption-separator">/</span> ILLUSTRATIVE DATA SURFACE</span><button id="motion-toggle" class="motion-button" type="button" aria-pressed="false" hidden><span class="motion-icon" aria-hidden="true">Ⅱ</span><span id="motion-label">Pause motion</span></button></figcaption>
+        </figure>
+      </div>
+      <div class="source-strip"><span class="mono">FOLLOWING THE DATA THROUGH</span><span>NASA <small>Exoplanet Archive</small></span><span>CERN <small>LHCb open data</small></span><span>Markets <small>Yahoo Finance</small></span></div>
+    </section>
+
+    <section id="projects" class="projects shell section-space" aria-labelledby="projects-title">
+      <div class="section-heading" data-reveal><div><p class="eyebrow">01 <span class="label-rule" aria-hidden="true"></span> SELECTED WORK</p><h2 id="projects-title">Four investigations.<br><span class="muted">One curious mind.</span></h2></div><p class="section-description">The question, the method, the finding.<br>Every study opens into the full report and code.</p></div>
+      <div class="project-grid">
+        <article class="project-card project-planets" aria-labelledby="planets-title" data-reveal>
+          <div class="project-top"><span class="project-category"><span class="category-symbol" aria-hidden="true">↗</span> ASTRONOMY</span><span class="project-number mono">STUDY / 01</span></div>
+          <div class="project-intro"><p class="source-label mono">NASA EXOPLANET ARCHIVE</p><h3 id="planets-title">The planets we find.<br>The patterns we miss.</h3><p>Transit vs radial velocity: comparing orbital periods and reported masses, while accounting for duplicate entries, missing measurements and detection bias.</p></div>
+          <figure class="project-visual period-visual" aria-labelledby="period-caption">
+            <figcaption id="period-caption"><span class="mono">MEDIAN ORBITAL PERIOD</span><span class="unit-label">days</span></figcaption>
+            <div class="period-row"><div class="chart-row-label"><span>Transit</span><strong>8.027 <small>d</small></strong></div><div class="bar-track" aria-hidden="true"><span class="bar-fill transit-bar" style="--bar-size:2.6071%"></span></div></div>
+            <div class="period-row"><div class="chart-row-label"><span>Radial velocity</span><strong>307.88 <small>d</small></strong></div><div class="bar-track" aria-hidden="true"><span class="bar-fill" style="--bar-size:100%"></span></div></div>
+            <div class="chart-axis mono" aria-hidden="true"><span>0</span><span>100</span><span>200</span><span>308 d</span></div>
+            <p class="chart-note">Observed archive samples, shaped by how planets are detected.</p>
+          </figure>
+          <div class="project-bottom"><ul class="tags" aria-label="Methods"><li>Python</li><li>Pandas</li><li>Distributions</li></ul><div class="project-links"><a href="assets/Data%20Analysis/Project%201/Data_Analysis_One.pdf" target="_blank" rel="noreferrer">Read report <span aria-hidden="true">↗</span><span class="sr-only">: exoplanets (PDF, opens in a new tab)</span></a><a class="code-link" href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%201(%20Nasa%20Exoplanets)" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> View code<span class="sr-only">: exoplanets (opens in a new tab)</span></a></div></div>
+        </article>
+
+        <article class="project-card project-peak" aria-labelledby="peak-title" data-reveal>
+          <div class="project-top"><span class="project-category"><span class="category-symbol" aria-hidden="true">∿</span> PARTICLE PHYSICS</span><span class="project-number mono">STUDY / 02</span></div>
+          <div class="project-intro"><p class="source-label mono">CERN OPEN DATA · LHCB</p><h3 id="peak-title">Finding a peak<br>in the collisions.</h3><p>My first ROOT-file investigation. Extracting reconstructed B<sup>±</sup> candidate masses and fitting a Gaussian peak with a constant background.</p></div>
+          <figure class="project-visual peak-visual" aria-labelledby="peak-caption">
+            <figcaption id="peak-caption"><span class="mono">FITTED PEAK CENTRE</span><span class="unit-label">MeV/c²</span></figcaption>
+            <div class="peak-value">5279.4<span>≈ μ</span></div>
+            <svg class="peak-plot" viewBox="0 0 420 120" role="img" aria-labelledby="peak-plot-title peak-plot-desc">
+              <title id="peak-plot-title">Normalized Gaussian peak component</title><desc id="peak-plot-desc">Model curve reconstructed using the report's centre of approximately 5279.4 MeV per c squared and width of 17.75 MeV per c squared. These are model values, not observed candidate counts.</desc>
+              <defs><linearGradient id="peak-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2f58b" stop-opacity=".19"/><stop offset="1" stop-color="#c2f58b" stop-opacity="0"/></linearGradient></defs>
+              <path class="plot-grid" d="M20 24H400M20 62H400M20 110H400M20 14V112M146.67 14V112M273.33 14V112M400 14V112"/>
+              <!-- The normalized model curve is calculated from the report's mu and sigma. -->
+              <path class="peak-area" fill="url(#peak-fill)" d="M20.000 109.996 L23.167 109.995 L26.333 109.993 L29.500 109.990 L32.667 109.987 L35.833 109.982 L39.000 109.976 L42.167 109.968 L45.333 109.958 L48.500 109.945 L51.667 109.928 L54.833 109.906 L58.000 109.878 L61.167 109.843 L64.333 109.799 L67.500 109.743 L70.667 109.674 L73.833 109.589 L77.000 109.484 L80.167 109.354 L83.333 109.197 L86.500 109.006 L89.667 108.775 L92.833 108.499 L96.000 108.170 L99.167 107.779 L102.333 107.318 L105.500 106.777 L108.667 106.147 L111.833 105.416 L115.000 104.574 L118.167 103.609 L121.333 102.509 L124.500 101.263 L127.667 99.860 L130.833 98.291 L134.000 96.545 L137.167 94.615 L140.333 92.496 L143.500 90.184 L146.667 87.677 L149.833 84.978 L153.000 82.090 L156.167 79.024 L159.333 75.790 L162.500 72.406 L165.667 68.892 L168.833 65.272 L172.000 61.573 L175.167 57.828 L178.333 54.071 L181.500 50.341 L184.667 46.676 L187.833 43.119 L191.000 39.712 L194.167 36.496 L197.333 33.514 L200.500 30.804 L203.667 28.404 L206.833 26.347 L210.000 24.663 L213.167 23.375 L216.333 22.503 L219.500 22.059 L222.667 22.050 L225.833 22.477 L229.000 23.332 L232.167 24.603 L235.333 26.272 L238.500 28.315 L241.667 30.702 L244.833 33.400 L248.000 36.372 L251.167 39.579 L254.333 42.980 L257.500 46.532 L260.667 50.193 L263.833 53.921 L267.000 57.678 L270.167 61.424 L273.333 65.125 L276.500 68.749 L279.667 72.268 L282.833 75.658 L286.000 78.897 L289.167 81.971 L292.333 84.866 L295.500 87.573 L298.667 90.088 L301.833 92.408 L305.000 94.534 L308.167 96.471 L311.333 98.224 L314.500 99.801 L317.667 101.210 L320.833 102.462 L324.000 103.567 L327.167 104.538 L330.333 105.385 L333.500 106.120 L336.667 106.754 L339.833 107.298 L343.000 107.762 L346.167 108.155 L349.333 108.487 L352.500 108.765 L355.667 108.997 L358.833 109.190 L362.000 109.349 L365.167 109.479 L368.333 109.585 L371.500 109.671 L374.667 109.741 L377.833 109.797 L381.000 109.841 L384.167 109.877 L387.333 109.905 L390.500 109.927 L393.667 109.944 L396.833 109.957 L400.000 109.968 L400 110 L20 110 Z"/>
+              <path id="peak-curve" class="plot-line" d="M20.000 109.996 L23.167 109.995 L26.333 109.993 L29.500 109.990 L32.667 109.987 L35.833 109.982 L39.000 109.976 L42.167 109.968 L45.333 109.958 L48.500 109.945 L51.667 109.928 L54.833 109.906 L58.000 109.878 L61.167 109.843 L64.333 109.799 L67.500 109.743 L70.667 109.674 L73.833 109.589 L77.000 109.484 L80.167 109.354 L83.333 109.197 L86.500 109.006 L89.667 108.775 L92.833 108.499 L96.000 108.170 L99.167 107.779 L102.333 107.318 L105.500 106.777 L108.667 106.147 L111.833 105.416 L115.000 104.574 L118.167 103.609 L121.333 102.509 L124.500 101.263 L127.667 99.860 L130.833 98.291 L134.000 96.545 L137.167 94.615 L140.333 92.496 L143.500 90.184 L146.667 87.677 L149.833 84.978 L153.000 82.090 L156.167 79.024 L159.333 75.790 L162.500 72.406 L165.667 68.892 L168.833 65.272 L172.000 61.573 L175.167 57.828 L178.333 54.071 L181.500 50.341 L184.667 46.676 L187.833 43.119 L191.000 39.712 L194.167 36.496 L197.333 33.514 L200.500 30.804 L203.667 28.404 L206.833 26.347 L210.000 24.663 L213.167 23.375 L216.333 22.503 L219.500 22.059 L222.667 22.050 L225.833 22.477 L229.000 23.332 L232.167 24.603 L235.333 26.272 L238.500 28.315 L241.667 30.702 L244.833 33.400 L248.000 36.372 L251.167 39.579 L254.333 42.980 L257.500 46.532 L260.667 50.193 L263.833 53.921 L267.000 57.678 L270.167 61.424 L273.333 65.125 L276.500 68.749 L279.667 72.268 L282.833 75.658 L286.000 78.897 L289.167 81.971 L292.333 84.866 L295.500 87.573 L298.667 90.088 L301.833 92.408 L305.000 94.534 L308.167 96.471 L311.333 98.224 L314.500 99.801 L317.667 101.210 L320.833 102.462 L324.000 103.567 L327.167 104.538 L330.333 105.385 L333.500 106.120 L336.667 106.754 L339.833 107.298 L343.000 107.762 L346.167 108.155 L349.333 108.487 L352.500 108.765 L355.667 108.997 L358.833 109.190 L362.000 109.349 L365.167 109.479 L368.333 109.585 L371.500 109.671 L374.667 109.741 L377.833 109.797 L381.000 109.841 L384.167 109.877 L387.333 109.905 L390.500 109.927 L393.667 109.944 L396.833 109.957 L400.000 109.968"/>
+            </svg>
+            <div class="model-axis mono" aria-hidden="true"><span>5200</span><span>mass / MeV/c²</span><span>5350</span></div>
+            <p class="chart-note">Normalized model component. A learning fit, not a precision mass measurement.</p>
+          </figure>
+          <div class="project-bottom"><ul class="tags" aria-label="Methods"><li>ROOT data</li><li>SciPy</li><li>Curve fitting</li></ul><div class="project-links"><a href="assets/Data%20Analysis/Data%20Analysis%202(CERN%202017%20B%2B)/Data_analysis_2.pdf" target="_blank" rel="noreferrer">Read report <span aria-hidden="true">↗</span><span class="sr-only">: B meson mass peak (PDF, opens in a new tab)</span></a><a class="code-link" href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%202(CERN%202017%20B%2B)" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> View code<span class="sr-only">: CERN analysis (opens in a new tab)</span></a></div></div>
+        </article>
+
+        <article class="project-card project-markets" aria-labelledby="markets-title" data-reveal>
+          <div class="project-top"><span class="project-category"><span class="category-symbol" aria-hidden="true">⌁</span> FINANCIAL DATA</span><span class="project-number mono">STUDY / 03</span></div>
+          <div class="project-intro"><p class="source-label mono">UBS × USD/CHF · 2021–2026</p><h3 id="markets-title">An idea the data<br>didn't support.</h3><p>Do UBS stock and USD/CHF converge? Five years of daily data showed near-zero linear return correlation and a trending relative-performance series.</p></div>
+          <figure class="project-visual correlation-visual" aria-labelledby="correlation-caption">
+            <figcaption id="correlation-caption"><span class="mono">DAILY RETURN CORRELATION</span><span class="unit-label">Pearson r</span></figcaption>
+            <div class="correlation-value">−0.01<span>approximately</span></div>
+            <div class="correlation-scale" role="img" aria-label="Pearson correlation of approximately minus 0.01, very close to zero on a scale from minus one to plus one"><span class="scale-centre" aria-hidden="true"></span><span class="scale-point" style="--correlation-position:49.5%" aria-hidden="true"></span></div>
+            <div class="correlation-axis mono" aria-hidden="true"><span>−1</span><span>0</span><span>+1</span></div>
+            <p class="chart-note"><strong>1,253</strong> common daily observations. Correlation alone does not test convergence.</p>
+          </figure>
+          <div class="project-bottom"><ul class="tags" aria-label="Methods"><li>yfinance</li><li>Time series</li><li>Correlation</li></ul><div class="project-links"><a href="assets/Data%20Analysis/Data%20Analysis%203(UBS%20and%20Forex)/Data_Analysis_3.pdf" target="_blank" rel="noreferrer">Read report <span aria-hidden="true">↗</span><span class="sr-only">: UBS and USD/CHF (PDF, opens in a new tab)</span></a><a class="code-link" href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%203(UBS%20and%20Forex)" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> View code<span class="sr-only">: UBS and USD/CHF (opens in a new tab)</span></a></div></div>
+        </article>
+
+        <article class="project-card project-selection" aria-labelledby="selection-title" data-reveal>
+          <div class="project-top"><span class="project-category"><span class="category-symbol" aria-hidden="true">∿</span> PARTICLE PHYSICS</span><span class="project-number mono">STUDY / 04</span></div>
+          <div class="project-intro"><p class="source-label mono">CERN OPEN DATA · THE FOLLOW-UP</p><h3 id="selection-title">Beyond the peak.<br>Into the assumptions.</h3><p>Testing vertex-quality selections, comparing signal and background models, and using residuals to see where a fit still falls short.</p></div>
+          <figure class="project-visual retention-visual" aria-labelledby="retention-caption">
+            <figcaption id="retention-caption"><span class="mono">CANDIDATES RETAINED AFTER SELECTION</span><span class="unit-label">%</span></figcaption>
+            <div class="retention-row"><span class="threshold">χ²/NDOF &lt; 5</span><div class="bar-track" aria-hidden="true"><span class="bar-fill" style="--bar-size:87.33%"></span></div><strong>87.33%</strong></div>
+            <div class="retention-row"><span class="threshold">χ²/NDOF &lt; 3</span><div class="bar-track" aria-hidden="true"><span class="bar-fill" style="--bar-size:80.07%"></span></div><strong>80.07%</strong></div>
+            <div class="retention-row"><span class="threshold">χ²/NDOF &lt; 2</span><div class="bar-track" aria-hidden="true"><span class="bar-fill" style="--bar-size:69.91%"></span></div><strong>69.91%</strong></div>
+            <p class="chart-note">Tighter cuts retain fewer candidates. Retention is not a measure of signal purity.</p>
+          </figure>
+          <div class="project-bottom"><ul class="tags" aria-label="Methods"><li>Selection cuts</li><li>Model comparison</li><li>Residuals</li></ul><div class="project-links"><a href="assets/Data%20Analysis/Data%20Analysis%202(CERN%202017%20B%2B)/Data_Analysis_2_part_2.pdf" target="_blank" rel="noreferrer">Read report <span aria-hidden="true">↗</span><span class="sr-only">: candidate selection and models (PDF, opens in a new tab)</span></a><a class="code-link" href="https://github.com/SeasonalError/Data-Analysis/tree/main/Data%20Analysis%202(CERN%202017%20B%2B)" target="_blank" rel="noreferrer"><span aria-hidden="true">&lt;/&gt;</span> View code<span class="sr-only">: CERN follow-up (opens in a new tab)</span></a></div></div>
+        </article>
+      </div>
+      <p class="results-note mono">PROJECT SNAPSHOTS <span aria-hidden="true">/</span> VALUES FROM THE LINKED REPORTS. METHODS AND LIMITATIONS INSIDE.</p>
+    </section>
+
+    <section id="about-data" class="approach shell section-space" aria-labelledby="approach-title">
+      <div class="approach-copy" data-reveal><p class="eyebrow">02 <span class="label-rule" aria-hidden="true"></span> THE APPROACH</p><h2 id="approach-title">The plot is only<br><span class="muted">the beginning.</span></h2><p>I'm a physics undergraduate learning by working with real datasets. I document the choices, mistakes and limitations as carefully as the results. Each investigation is another step toward better scientific judgement.</p><div class="toolkit"><span class="mono">MY WORKING TOOLKIT</span><p>Python <span>/</span> Pandas <span>/</span> NumPy<br>Matplotlib <span>/</span> SciPy <span>/</span> ROOT files</p></div></div>
+      <ol class="method-list" aria-label="My analysis process">
+        <li data-reveal><span class="method-index mono">01</span><div><h3>Start with a question.</h3><p>Make the idea specific enough that data could change my mind.</p></div><span class="method-code mono" aria-hidden="true">?</span></li>
+        <li data-reveal><span class="method-index mono">02</span><div><h3>Know what a row means.</h3><p>Check provenance, duplicates, missing values and selection effects before plotting.</p></div><span class="method-code mono" aria-hidden="true">[ ]</span></li>
+        <li data-reveal><span class="method-index mono">03</span><div><h3>Test the interpretation.</h3><p>Compare models, inspect residuals and look for assumptions that don't hold.</p></div><span class="method-code mono" aria-hidden="true">≠</span></li>
+        <li data-reveal><span class="method-index mono">04</span><div><h3>Leave a clear trail.</h3><p>Publish the report and code, including what the analysis does not establish.</p></div><span class="method-code mono" aria-hidden="true">↗</span></li>
+      </ol>
+    </section>
+    <aside class="next-note shell" aria-label="Future projects" data-reveal><span class="mono next-label">NEXT INVESTIGATION <span aria-hidden="true">→</span></span><p>Still learning.<br><strong>Still asking better questions.</strong></p><span class="next-copy">More studies as I build stronger foundations in statistics, visualisation and scientific computing.</span></aside>
+  </main>
+  <footer class="lab-footer shell"><a class="footer-brand" href="index.html">Nimeesh<span class="accent">.</span></a><span class="mono">© <span id="year">2026</span> · DATA ANALYSIS</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
-
 </html>
