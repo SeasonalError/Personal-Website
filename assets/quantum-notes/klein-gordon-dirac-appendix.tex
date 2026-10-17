@@ -1,0 +1,126 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,geometry,xcolor,fancyhdr,enumitem,microtype}
+\usepackage[colorlinks=true,urlcolor=teal,linkcolor=teal]{hyperref}
+\geometry{left=21mm,right=21mm,top=22mm,bottom=22mm}
+\definecolor{ink}{HTML}{172D37}
+\definecolor{accent}{HTML}{8E4A20}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\headheight}{14pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=2pt,topsep=3pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\sffamily NSK / FIELD NOTES}
+\fancyhead[R]{\small\sffamily RELATIVISTIC QUANTUM MECHANICS}
+\fancyfoot[L]{\footnotesize\sffamily Typed supplement / 17 October 2026}
+\fancyfoot[R]{\footnotesize\sffamily \thepage\ / 7}
+\renewcommand{\headrulewidth}{0.3pt}
+\newcommand{\titleblock}[2]{{\color{accent}\small\sffamily #1}\par\vspace{2pt}{\color{ink}\LARGE\bfseries #2}\par\vspace{5pt}}
+\newcommand{\sub}[1]{\par\vspace{5pt}{\color{ink}\large\bfseries #1}\par}
+\newcommand{\refn}[1]{{\small\color{accent}[#1]}}
+\begin{document}
+\setcounter{page}{5}
+\titleblock{APPENDIX A / CORRECTIONS}{Making the derivation precise}
+The first four pages are Nimeesh S K's original handwritten notes, kept intact. These three typed pages are an editorial supplement prepared with AI assistance: corrections, interpretation and a bridge to the next topic. Page references below refer to the original scans.
+
+\sub{1. Page 2: keep the mass term outside $i\hbar$}
+Starting from the Hamiltonian, move every term to the left and divide by $c$:
+\begin{align*}
+i\hbar\partial_t\psi&=(-i\hbar c\,\boldsymbol\alpha\!\cdot\!\nabla+\beta mc^2)\psi,\\[-2pt]
+\left[i\hbar\left(\frac{1}{c}\partial_t+\boldsymbol\alpha\!\cdot\!\nabla\right)-\beta mc\right]\psi&=0.
+\end{align*}
+The intermediate handwritten line places the mass term inside the $i\hbar$ factor. Use the second line above instead. Now multiply \emph{from the left} by $\beta$ and use $\beta^2=I$:
+\[
+\boxed{(i\hbar\gamma^\mu\partial_\mu-mc)\psi=0},\qquad
+\gamma^0=\beta,\quad\gamma^i=\beta\alpha_i.
+\]
+The final covariant equation in the scan is correct. The missing step is the left multiplication by $\beta$; $\alpha_i$ and $\gamma^i$ are different matrices.
+
+\sub{2. Fix the conventions before manipulating indices}
+Here $x^\mu=(ct,x,y,z)$, $\partial_\mu=(c^{-1}\partial_t,\partial_x,\partial_y,\partial_z)$ and $g^{\mu\nu}=\operatorname{diag}(1,-1,-1,-1)$. Repeated spacetime indices run from 0 to 3; spatial indices run from 1 to 3. Thus
+\[
+\{\gamma^\mu,\gamma^\nu\}=2g^{\mu\nu}I,\qquad
+(\gamma^0)^2=I,\quad(\gamma^i)^2=-I.
+\]
+The braces mean $AB+BA$. The matrices anticommute for \emph{different} indices; their squares are not zero. The minimal complex Dirac matrices in $3+1$ dimensions are $4\times4$. \refn{1}
+
+\sub{3. Pages 3--4: use one momentum consistently}
+The opening momentum on page 3 appears to read $\sqrt{2}\,mc$, but page 4 and the displayed spinor use $\boxed{p=\sqrt{3}\,mc}$. Taking the positive-energy branch gives
+\[
+E=2mc^2,\qquad \frac{b}{a}=\frac{cp}{E+mc^2}=\frac{1}{\sqrt3},\qquad
+a=\frac{\sqrt3}{2},\quad b=\frac12.
+\]
+These coefficients are correct for $p=\sqrt3\,mc$. If $p=\sqrt2\,mc$ was intended, then $E=\sqrt3\,mc^2$ and the coefficients must change. For general positive $p$, with real $a,b$ and $a^2+b^2=1$,
+\[
+a=\sqrt{\frac{E+mc^2}{2E}},\qquad
+b=\sqrt{\frac{E-mc^2}{2E}}.
+\]
+
+\newpage
+\titleblock{APPENDIX B / PHYSICAL MEANING}{What the equations are saying}
+\sub{4. Klein--Gordon is still a valid equation}
+Page 1 correctly recovers $E^2=p^2c^2+m^2c^4$. Both energy signs are allowed. For a complex, massive KG wave, a conventional conserved density is
+\[
+\rho_{\rm KG}=\frac{i\hbar}{2mc^2}
+\left(\phi^*\partial_t\phi-\phi\partial_t\phi^*\right).
+\]
+For $\phi=Ae^{i(\mathbf p\cdot\mathbf x-Et)/\hbar}$, direct substitution gives $\rho_{\rm KG}=E|A|^2/(mc^2)$. Its sign can be negative, so it cannot serve as a general positive single-particle probability density. \refn{2}
+
+That does not invalidate KG. In field theory a complex scalar has a conserved charge current, with opposite charges for particles and antiparticles; a real scalar describes neutral quanta. A scalar KG field describes spin 0. Each component of a free Dirac solution also obeys KG, but the components are linked by the first-order Dirac equation. \refn{1,3}
+
+\sub{5. The Dirac current checks the electron example}
+For a first-quantized Dirac spinor,
+\[
+\rho=\psi^\dagger\psi\geq0,\qquad
+\mathbf j=c\psi^\dagger\boldsymbol\alpha\psi,\qquad
+\partial_t\rho+\nabla\!\cdot\!\mathbf j=0.
+\]
+Equivalently $j^\mu=c\bar\psi\gamma^\mu\psi$, where $\bar\psi=\psi^\dagger\gamma^0$ and $j^0=c\rho$. The electric current additionally carries the particle's charge. \refn{2}
+
+For the page 4 spinor $u=(a,0,b,0)^{\mathsf T}$, real $a,b$ give
+\[
+u^\dagger\alpha_z u=2ab,\qquad
+\frac{j_z}{\rho}=2cab=\frac{\sqrt3}{2}c
+=\frac{pc^2}{E}.
+\]
+The probability flows along $+z$ at the expected subluminal speed. The condition $u^\dagger u=1$ normalizes the \emph{spinor}, not a plane wave throughout infinite space. In a periodic box of volume $V$, use $\psi=u e^{i(pz-Et)/\hbar}/\sqrt V$; a localized particle requires a wave packet.
+
+\sub{6. Four components are not four particles}
+In the Dirac basis used in the scans, the upper and lower pairs are coupled parts of one spinor. A nonzero lower pair does not mean an electron has become partly a positron. Particle and antiparticle states are identified through the energy-mode structure and field quantization, not by simply naming individual entries. \refn{1,4}
+
+For $p\ll mc$, $b/a=cp/(E+mc^2)\simeq p/(2mc)$: the lower pair is small. At $p=\sqrt3\,mc$, it is significant. This is a useful way to see how the nonrelativistic approximation begins to fail.
+
+\newpage
+\titleblock{APPENDIX C / THE NEXT LAYER}{Covariance, chirality and fields}
+\sub{7. Lorentz transformations have two jobs}
+For $x'=\Lambda x$, a spinor transforms as $\psi'(x')=S(\Lambda)\psi(x)$. The coordinate transformation changes the argument; $S$ mixes the spinor components. For proper orthochronous transformations, covariance follows from
+\[
+S^{-1}\gamma^\mu S=\Lambda^\mu{}_{\nu}\gamma^\nu.
+\]
+This makes the transformed equation have the same form. The four spinor entries are not the four coordinates of spacetime. \refn{1}
+
+\sub{8. Massless does not mean photon}
+Define $\gamma^5=i\gamma^0\gamma^1\gamma^2\gamma^3$ and $P_{L,R}=(I\mp\gamma^5)/2$. In a chiral basis, writing the two Weyl components as $\psi_L,\psi_R$, the free equations are
+\begin{align*}
+i\hbar\partial_t\psi_L&=+i\hbar c\,\boldsymbol\sigma\!\cdot\!\nabla\psi_L+mc^2\psi_R,\\
+i\hbar\partial_t\psi_R&=-i\hbar c\,\boldsymbol\sigma\!\cdot\!\nabla\psi_R+mc^2\psi_L.
+\end{align*}
+The mass term couples the two chiralities. When $m=0$, they evolve independently: an initially absent component stays absent under free evolution. These are spin-$1/2$ Weyl equations; photons are spin-1 excitations of the electromagnetic field. \refn{1,5}
+
+``Left'' is not a direction of travel. Helicity measures spin relative to momentum; chirality labels the spinor's transformation type. For positive-energy massless particle states, left chirality corresponds to negative helicity and right chirality to positive helicity. Massive particles need not have matching chirality and helicity. Antiparticle conventions require separate care. \refn{5}
+
+\sub{9. Why second quantization comes next}
+Positive Dirac probability density does not remove negative-energy solutions. Quantization reinterprets the mode expansion in terms of operators that destroy particles and create antiparticles, with positive excitation energies. A state lives in Fock space; the field is an operator acting on that state. \refn{4}
+
+Start with occupation numbers and the oscillator ladder operators, then bosonic commutators and fermionic anticommutators. The latter enforce at most one identical fermion per single-particle state. Second quantization also works for nonrelativistic systems with conserved total particle number; number-changing processes become possible when the interactions allow them. \refn{3,4}
+
+\vspace{4pt}\hrule\vspace{5pt}
+{\small\textbf{Sources for the added explanations}\par
+\footnotesize
+[1] David Tong, \href{https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S4.html}{\emph{Quantum Field Theory}, section 4: The Dirac Equation}.\par
+[2] MIT 8.322, \href{https://web.mit.edu/8.322/Spring%202007/notes/chapter1.pdf}{\emph{The Dirac Equation}, chapter 1, sections 1.2--1.3}.\par
+[3] David Tong, \href{https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S2.html}{\emph{Quantum Field Theory}, section 2: Free Fields}.\par
+[4] David Tong, \href{https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S5.html}{\emph{Quantum Field Theory}, section 5: Quantizing the Dirac Field}.\par
+[5] MIT 8.811, \href{https://ocw.mit.edu/courses/8-811-particle-physics-ii-fall-2005/resources/lec4/}{\emph{Particle Physics II}, lecture 4: chirality and helicity}.\par
+The worked-example checks above are direct algebra using the scanned equations.}
+\end{document}

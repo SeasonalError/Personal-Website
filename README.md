@@ -71,7 +71,7 @@ The main portfolio, data-analysis page and reading library use `styles.css` and 
 
 ### Particle Physics page (`particle-physics.html`)
 
-The page contains a cinematic detector hero, the study roadmap, an illustrative animated track display, three existing notes, two LHCb reports and a reading shelf. The older `quantum-chemistry.html` URL redirects here and preserves section fragments such as `#my-notes` and `#recommended`.
+The page contains a cinematic detector hero, the study roadmap, an illustrative animated track display, four notes (including a featured handwritten Klein-Gordon / Dirac entry), two LHCb reports and a reading shelf. The older `quantum-chemistry.html` URL redirects here and preserves section fragments such as `#my-notes` and `#recommended`.
 
 #### Update published progress
 
@@ -83,7 +83,11 @@ Checkbox changes made in a browser are **local to that browser and origin**. The
 
 #### Notes and links
 
-The original PDFs remain under `assets/quantum-notes/`. Add new note links in `#my-notes`. The CERN reports remain at their original paths. Add resources in `#recommended`; no carousel script or dependency is required.
+The PDFs remain under `assets/quantum-notes/`. The featured entry in `#my-notes` offers a reviewed PDF, a download, a scan preview and a link to the unmodified original. Its three-page appendix is explicitly separate from the four handwritten pages. It corrects the intermediate Dirac mass term and the inconsistent momentum, then adds interpretation and cited context. It does not claim the handwritten notes cover those added topics.
+
+For another handwritten note, copy the `featured-note` article (or use a compact `note` row), give it a unique ID, and update the PDF paths, title, date, description, page count, size and preview alt text. Update the notebook count in `.signal-strip` too. Keep the original scan available and clearly distinguish later corrections from handwriting. Native links and the appendix disclosure work without JavaScript; PDF viewing uses the browser's viewer, with a download fallback. The source and rebuild steps for this entry are in `assets/quantum-notes/README.md`.
+
+The CERN reports remain at their original paths. Add resources in `#recommended`; no carousel script or dependency is required.
 
 #### Motion and accessibility
 
