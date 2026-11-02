@@ -676,3 +676,13 @@ Three cards are displayed at once on desktop.
         scroll-behavior: auto !important;
     }
 }
+
+#projects { scroll-margin-top: 6rem; }
+
+@media (max-width: 1000px) {
+    #projects .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+        overflow: visible;
+    }
+}
